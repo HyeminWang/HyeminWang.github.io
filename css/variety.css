@@ -1,0 +1,793 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../../../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../../../font/NotoSerifKR-Regular.woff);
+}
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../../../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../../../font/NotoSerifKR-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "SANGJU Gyeongcheon Island";
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.125em;
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  color: black;
+  font-size: 3.125em;
+}
+
+h4 {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1em;
+  font-family: "NotoSerifKR-Regular";
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+    height: 100%;
+    max-width: 2560px;
+  }
+}
+.container {
+  padding: 0 20px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/background/detail_page_main_background.png);
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.wrapper .flexWrapper header {
+  height: 80px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header {
+    height: auto;
+    width: 370px;
+    background-image: url(../../../images/background/detail_page_header_background.png);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header {
+    position: fixed;
+  }
+}
+.wrapper .flexWrapper header .header .logoMenu {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu {
+    display: block;
+    padding-top: 70px;
+    padding-left: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .logo a {
+    width: 190px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu {
+    margin-top: 130px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li {
+    padding-bottom: 60px;
+  }
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li:hover ul {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li:first-child {
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li .subMenu {
+    height: 0px;
+    overflow: hidden;
+    padding-top: 40px;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li .subMenu li {
+    display: flex;
+    padding-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .logoMenu .menu .gnb li .subMenu li a {
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-family: "NotoSerifKR-Regular";
+  }
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu {
+  z-index: 50;
+  position: relative;
+  display: flex;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper header .header .mobileLogoMenu {
+    display: none;
+  }
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .mobileLogo {
+  position: fixed;
+  top: 22px;
+  left: 20px;
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .beforeMenu {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  cursor: pointer;
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .beforeMenu span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .beforeMenu span:nth-child(2) {
+  margin: 5px 0;
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .afterMenu {
+  display: none;
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  cursor: pointer;
+}
+.wrapper .flexWrapper header .header .mobileLogoMenu .afterMenu:after {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  content: "×";
+  font-size: 50px;
+  color: black;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main {
+    width: 1180px;
+    margin: 0 auto;
+  }
+}
+.wrapper .flexWrapper main .main .mainSubMenu {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main .mainSubMenu {
+    display: block;
+    width: 100%;
+    height: 70px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main .mainSubMenu ul {
+    display: flex;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main .mainSubMenu ul li {
+    padding-left: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main .mainSubMenu ul li a {
+    font-family: "NotoSerifKR-Regular";
+    font-size: 14px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol {
+  position: relative;
+  margin: 30px 0 100px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol {
+    margin-top: 130px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .pc-middle-bar span {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .pc-middle-bar span {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: #6f6f6f;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box {
+  width: 100%;
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol p {
+  line-height: 30px;
+  font-size: 1.25em;
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol img {
+    width: 405px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol .bg {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .alcohol .bg {
+    display: block;
+    width: 480px;
+    height: 530px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd {
+    flex-direction: row;
+    height: 630px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .text_box {
+  width: 100%;
+  order: 2;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .text_box {
+    width: 33%;
+    order: 1;
+    position: absolute;
+    top: 190px;
+    left: 45px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .img_box {
+  order: 1;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .img_box {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .img_box a img {
+    position: absolute;
+    top: 65px;
+    left: 480px;
+    z-index: 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .odd .img_box .bg {
+    position: absolute;
+    top: 0;
+    left: 700px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even {
+  position: relative;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even {
+    height: 630px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .text_box {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .text_box {
+    width: 33%;
+    position: absolute;
+    top: 190px;
+    left: 750px;
+  }
+}
+.wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .img_box {
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .img_box {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .img_box a img {
+    position: absolute;
+    top: 65px;
+    left: 300px;
+    z-index: 2;
+    order: 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper .flexWrapper main .main section.variety_alcohol .alcohol-box .even .img_box .bg {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer .container {
+    margin: 0;
+  }
+}
+footer .footer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer {
+    width: 100%;
+    padding: 120px 185px 80px 545px;
+  }
+}
+footer .footer .footInfo {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+footer .footer .footInfo address {
+  font-style: normal;
+  font-family: "NotoSerifKR-Regular";
+}
+footer .footer .footInfo p {
+  margin: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footInfo p {
+    margin: 0;
+  }
+}
+footer .footer .footBox {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox {
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
+footer .footer .footBox .footLogoCopy {
+  padding: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footLogoCopy {
+    width: 30%;
+    padding: 0;
+    border: 0;
+  }
+}
+footer .footer .footBox .footLogoCopy a {
+  color: white;
+  font-size: 60px;
+}
+footer .footer .footBox .footLogoCopy p {
+  font-size: 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footLogoCopy .copyright {
+    font-size: 12px;
+    font-family: "NotoSerifKR-Regular";
+  }
+}
+footer .footer .footBox .footSns {
+  padding: 30px;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns {
+    position: relative;
+    width: 40%;
+    height: 250px;
+    border-bottom: 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont {
+    padding: 60px 80px;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont li {
+  padding: 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont li {
+    padding-right: 15px;
+  }
+  footer .footer .footBox .footSns .footSnsCont li:last-child {
+    padding-right: 0;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont li img {
+  width: 50px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont li img {
+    width: 60px;
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+  footer .footer .footBox .footSns .footSnsCont li img:hover {
+    opacity: 1;
+  }
+}
+footer .footer .footBox .footMenu {
+  padding: 40px 0;
+  font-size: 14px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footMenu {
+    width: 30%;
+    padding: 0;
+    font-size: 14px;
+  }
+}
+footer .footer .footBox .footMenu ul {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+footer .footer .footBox .footMenu ul:last-child {
+  text-align: left;
+}
+footer .footer .footBox .footMenu ul li {
+  width: 33%;
+  padding: 0 5px;
+  text-align: center;
+}
+footer .footer .footBox .footMenu ul li a {
+  width: 100%;
+  color: white;
+}
+
+.wrapper1 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 {
+    display: none;
+  }
+}
+.wrapper1 .wrap-inner {
+  height: 100vh;
+  background-image: url(../../../../images/background/main_menu_background.png);
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner {
+    display: none;
+  }
+}
+.wrapper1 .wrap-inner .container1 {
+  width: 100%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 {
+    display: flex;
+    padding: 0 130px;
+    flex-wrap: wrap;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 {
+  position: relative;
+  margin-top: 0;
+  height: 550px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 {
+    position: relative;
+    width: 77%;
+    height: 820px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  left: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb {
+    position: absolute;
+    top: 60px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb #extra {
+  margin: 50px 0 70px;
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li {
+    display: initial;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li a {
+  font-size: 34px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li a {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .gnb-title {
+    margin: 50px 0 20px 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li {
+    display: flex;
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li a {
+  color: #a3a3a3;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li a {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li {
+  justify-content: end;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li {
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li2 {
+  flex-direction: column;
+  text-align: right;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li2 {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 {
+  font-family: "NotoSerifKR-Regular";
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 {
+    width: 23%;
+    margin: 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 .close-btn-pc {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 .close-btn-pc {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 150px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul {
+    display: initial;
+    font-family: "SANGJU Gyeongcheon Island";
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul li {
+    margin-top: 130px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 ul li a {
+  margin: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul li a {
+    color: #a3a3a3;
+  }
+}
+.wrapper1 .wrap-inner .container1 span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #a3a3a3;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer {
+    display: flex;
+    width: 100%;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 {
+  padding: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 {
+    width: 65%;
+    padding: 20px 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 {
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li {
+  padding: 10px;
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li img {
+  width: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li img {
+    width: 40px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .footerInfo1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .footerInfo1 {
+    width: 35%;
+    padding: 0;
+    font-size: 16px;
+    align-items: center;
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .footerInfo1 p:last-child {
+    margin-left: 100px;
+  }
+}/*# sourceMappingURL=variety.css.map */
