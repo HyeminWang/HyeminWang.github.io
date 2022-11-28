@@ -1,0 +1,813 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../font/NotoSerifKR-Regular.woff);
+}
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../font/NotoSerifKR-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "SANGJU Gyeongcheon Island";
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.125em;
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  color: black;
+  font-size: 3.125em;
+}
+
+h4 {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1em;
+  font-family: "NotoSerifKR-Regular";
+}
+
+body {
+  background: url(../images/background/main_page_background.png) repeat;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+header .pc {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  header .pc {
+    display: block;
+  }
+}
+header .pc .logo {
+  position: fixed;
+  top: 70px;
+  left: 100px;
+}
+header .mobile {
+  height: 80px;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile {
+    height: 0;
+  }
+}
+header .mobile .mobileLogoMenu {
+  display: flex;
+}
+header .mobile .mobileLogoMenu .mobileLogo {
+  position: fixed;
+  top: 22px;
+  left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile .mobileLogoMenu .mobileLogo {
+    display: none;
+  }
+}
+header .mobile .mobileLogoMenu .mobileLogo a {
+  width: 32px;
+}
+header .mobile .mobileLogoMenu .mobileLogo a img {
+  width: 100%;
+}
+header .mobile .mobileLogoMenu .beforeMenu {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile .mobileLogoMenu .beforeMenu {
+    top: 95px;
+    right: 100px;
+  }
+}
+header .mobile .mobileLogoMenu .beforeMenu span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: white;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile .mobileLogoMenu .beforeMenu span {
+    width: 40px;
+    height: 6px;
+  }
+  header .mobile .mobileLogoMenu .beforeMenu span:nth-child(2) {
+    margin: 0;
+  }
+}
+header .mobile .mobileLogoMenu .beforeMenu span:nth-child(2) {
+  margin: 5px 0;
+}
+header .mobile .mobileLogoMenu .afterMenu {
+  display: none;
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile .mobileLogoMenu .afterMenu {
+    top: 95px;
+    right: 100px;
+  }
+}
+header .mobile .mobileLogoMenu .afterMenu:after {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  content: "×";
+  font-size: 50px;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  header .mobile .mobileLogoMenu .afterMenu:after {
+    top: 80px;
+    right: 100px;
+    color: black;
+    font-size: 70px;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main section {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1024px) {
+  main section {
+    height: 100vh;
+  }
+}
+main .pcSec1 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+main .pcSec1 .video {
+  width: auto;
+}
+main .pcSec1 .video video {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec1 .video video {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+main .pcSec1 .para {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec1 .para {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main .pcSec1 .para h3,
+main .pcSec1 .para h4 {
+  color: white;
+  line-height: 150%;
+}
+main .pcSec1 .para h3 {
+  font-size: 100px;
+}
+main .pcSec1 .para h4 {
+  font-size: 40px;
+}
+main .mobileSec {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main .mobileSec {
+    display: none;
+  }
+}
+main .mobileSec .mobilePara {
+  padding: 100px 0;
+}
+main .mobileSec .mobilePara h3,
+main .mobileSec .mobilePara h4 {
+  line-height: 150%;
+  color: white;
+}
+main .mobileSec .mobilePara h4 {
+  font-size: 16px;
+}
+main .pcSec2 {
+  display: none;
+  position: relative;
+  background-size: cover;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec2 {
+    display: block;
+  }
+}
+main .pcSec2 .h3ImgP ul {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+main .pcSec2 .h3ImgP ul li {
+  width: 15%;
+}
+main .pcSec2 .h3ImgP ul li a {
+  width: 100%;
+  color: white;
+  font-size: 100px;
+}
+main .pcSec3 {
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+}
+main .pcSec3 .category {
+  width: 100%;
+}
+main .pcSec3 .category ul {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec3 .category ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 60px;
+  }
+}
+main .pcSec3 .category ul li {
+  position: relative;
+}
+main .pcSec3 .category ul li #second:hover {
+  background-image: url(https://media1.giphy.com/media/xT5LMyaDUZlsLVVxNS/giphy.gif?cid=ecf05e47mry7qvnp5415uo99tw4kpy7z36tpgp6muvgt1hru&rid=giphy.gif&ct=g);
+  background-size: cover;
+}
+main .pcSec3 .category ul li #third:hover {
+  background-image: url(https://media1.giphy.com/media/KKBPAzaiAzh7y/giphy.gif?cid=ecf05e47iondb2sbqnscph4fy3ra8kvyw87dkiws2wh7tjhl&rid=giphy.gif&ct=g);
+  background-size: cover;
+}
+main .pcSec3 .category ul li #fourth:hover {
+  background-image: url(https://media1.giphy.com/media/xT3i0UAQ03ulPHlrb2/giphy.gif?cid=ecf05e47so9lqk3t0dnt8vpozm8tlgtqs1byru510brnzr06&rid=giphy.gif&ct=g);
+  background-size: cover;
+}
+main .pcSec3 .category ul li #fifth:hover {
+  background-image: url(https://media4.giphy.com/media/l4FB53kezY6TlL1PG/giphy.gif?cid=ecf05e476m4bc2h5dw24vss7gz8929vt9g2n55yhwde34pa0&rid=giphy.gif&ct=g);
+  background-size: cover;
+}
+main .pcSec3 .category ul li a {
+  width: 100%;
+  font-size: 30px;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec3 .category ul li a {
+    position: relative;
+    font-size: 100px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+  }
+  main .pcSec3 .category ul li a:hover {
+    -webkit-text-stroke: 0px;
+    background-image: url(https://media0.giphy.com/media/xT3i138nBvO5kZ0YiA/giphy.gif?cid=ecf05e47unaip28r6q2acg2tn4qxh36uxa910r13dbcaothf&rid=giphy.gif&ct=g);
+    background-size: cover;
+  }
+}
+main .pcSec4 {
+  display: none;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  main .pcSec4 {
+    display: block;
+  }
+}
+main .pcSec4 .fallingConts {
+  color: white;
+}
+main .pcSec4 .fallingConts div {
+  position: absolute;
+}
+main .pcSec4 .fallingConts div p {
+  font-family: "SANGJU Gyeongcheon Island";
+}
+main .pcSec4 .fallingConts .cont1 {
+  display: none;
+  top: 50%;
+  right: 30%;
+  transform: rotate(-20deg);
+}
+main .pcSec4 .fallingConts .cont1 p {
+  font-size: 26px;
+  color: #ccc;
+  text-align: right;
+}
+main .pcSec4 .fallingConts .cont2 {
+  display: none;
+  top: 55%;
+  left: 30%;
+  transform: rotate(20deg);
+}
+main .pcSec4 .fallingConts .cont2 p {
+  color: #ccc;
+  font-size: 80px;
+}
+main .pcSec4 .fallingConts .cont3 {
+  display: none;
+  bottom: 70%;
+  left: 60%;
+  transform: rotate(20deg);
+}
+main .pcSec4 .fallingConts .cont3 p {
+  font-size: 40px;
+  color: #ccc;
+}
+main .pcSec4 .fallingConts .cont4 {
+  display: none;
+  right: 60%;
+  bottom: 50%;
+  transform: rotate(-20deg);
+  opacity: 0.4;
+}
+main .pcSec4 .fallingConts .cont5 {
+  display: none;
+  bottom: 45%;
+  left: 45%;
+  transform: rotate(20deg);
+  opacity: 0.4;
+}
+main .pcSec4 .fallingConts .cont5 img {
+  width: 50%;
+}
+main .pcSec4 .fallingConts .cont6 {
+  display: none;
+  right: 50%;
+  bottom: 70%;
+  font-size: 180px;
+  transform: rotate(-20deg);
+  color: #ccc;
+}
+main .pcSec4 .fallingConts .cont7 {
+  display: none;
+  right: 40%;
+  bottom: 50%;
+  font-size: 150px;
+}
+
+footer .container {
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  footer .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+footer .footer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer {
+    width: 100%;
+    padding: 120px 0 80px;
+  }
+}
+footer .footer .footInfo {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+footer .footer .footInfo address {
+  font-style: normal;
+  font-family: "NotoSerifKR-Regular";
+}
+footer .footer .footInfo p {
+  margin: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footInfo p {
+    margin: 0;
+  }
+}
+footer .footer .footBox {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox {
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+}
+footer .footer .footBox .footLogoCopy {
+  padding: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footLogoCopy {
+    width: 30%;
+    padding: 0;
+    border: 0;
+  }
+}
+footer .footer .footBox .footLogoCopy a {
+  color: white;
+  font-size: 60px;
+}
+footer .footer .footBox .footLogoCopy p {
+  font-size: 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footLogoCopy .copyright {
+    font-size: 12px;
+    font-family: "NotoSerifKR-Regular";
+  }
+}
+footer .footer .footBox .footSns {
+  padding: 30px;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns {
+    position: relative;
+    width: 40%;
+    height: 250px;
+    border-bottom: 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont {
+    padding: 60px 80px;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont li {
+  padding: 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont li {
+    padding-right: 15px;
+  }
+  footer .footer .footBox .footSns .footSnsCont li:last-child {
+    padding-right: 0;
+  }
+}
+footer .footer .footBox .footSns .footSnsCont li img {
+  width: 50px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footSns .footSnsCont li img {
+    width: 60px;
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+  footer .footer .footBox .footSns .footSnsCont li img:hover {
+    opacity: 1;
+  }
+}
+footer .footer .footBox .footMenu {
+  width: 100%;
+  padding: 40px 0;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footBox .footMenu {
+    width: 30%;
+    padding: 0;
+    font-size: 14px;
+  }
+}
+footer .footer .footBox .footMenu ul {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+footer .footer .footBox .footMenu ul:last-child {
+  text-align: left;
+}
+footer .footer .footBox .footMenu ul li {
+  width: 33%;
+  padding: 0 5px;
+  text-align: center;
+}
+footer .footer .footBox .footMenu ul li a {
+  width: 100%;
+  color: white;
+}
+
+.wrapper1 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper1 .wrap-inner {
+  height: 100vh;
+  background-image: url(../images/background/map_img_background.png);
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 70%;
+    height: 97%;
+  }
+}
+.wrapper1 .wrap-inner .container1 {
+  width: 100%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 {
+    display: flex;
+    padding: 0 130px;
+    flex-wrap: wrap;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 {
+  position: relative;
+  margin-top: 0;
+  height: 550px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 {
+    position: relative;
+    width: 77%;
+    height: 820px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  left: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb {
+    position: absolute;
+    top: 60px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb #extra {
+  margin: 50px 0 70px;
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li {
+    display: initial;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li a {
+  font-size: 34px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li a {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .gnb-title {
+    margin: 50px 0 20px 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li {
+    display: flex;
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li a {
+  color: #a3a3a3;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb li a {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li {
+  justify-content: end;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li {
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li2 {
+  flex-direction: column;
+  text-align: right;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu1 .gnb li .sub-gnb .sub-gnb-li2 {
+    text-align: left;
+    flex-direction: row;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 {
+  font-family: "NotoSerifKR-Regular";
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 {
+    width: 23%;
+    margin: 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 .close-btn-pc {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 .close-btn-pc {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 150px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul {
+    display: initial;
+    font-family: "SANGJU Gyeongcheon Island";
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul li {
+    margin-top: 130px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .menu2 ul li a {
+  margin: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .menu2 ul li a {
+    color: #a3a3a3;
+  }
+}
+.wrapper1 .wrap-inner .container1 span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #a3a3a3;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer {
+    display: flex;
+    width: 100%;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 {
+  padding: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 {
+    width: 65%;
+    padding: 20px 0;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 {
+    justify-content: left;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li {
+  padding: 10px;
+}
+.wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li img {
+  width: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .sns1 .footSns1 li img {
+    width: 40px;
+  }
+}
+.wrapper1 .wrap-inner .container1 .footer .footerInfo1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .footerInfo1 {
+    width: 35%;
+    padding: 0;
+    font-size: 16px;
+    align-items: center;
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper1 .wrap-inner .container1 .footer .footerInfo1 p:last-child {
+    margin-left: 100px;
+  }
+}/*# sourceMappingURL=index.css.map */
